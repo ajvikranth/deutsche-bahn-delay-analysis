@@ -1,0 +1,101 @@
+[
+    {
+        "train_number": "38581",
+        "train_type": "S",
+        "train_line": "5",
+        "train_departure": "2407062335",
+        "train_stops": "Heidelberg-Weststadt/Südstadt|Heidelberg-Altstadt|Heidelberg-Schlierbach/Ziegelhausen|Heidelberg Orthopädie|Neckargemünd|Bammental|Reilsheim|Mauer(b Heidelberg)|Meckesheim|Zuzenhausen|Hoffenheim|Sinsheim(Elsenz) Hbf",
+        "train_delay_departure": "2407062337",
+        "train_delay_msg": []
+    },
+    {
+        "train_number": "19292",
+        "train_type": "RE",
+        "train_line": "10b",
+        "train_departure": "2407062310",
+        "train_stops": "Mannheim Hbf",
+        "train_delay_departure": "",
+        "train_delay_msg": []
+    },
+    {
+        "train_number": "26159",
+        "train_type": "RE",
+        "train_line": "73",
+        "train_departure": "2407062310",
+        "train_stops": "Wiesloch-Walldorf|Bad Schönborn-Kronau|Bruchsal|Karlsruhe-Durlach|Karlsruhe Hbf",
+        "train_delay_departure": "2407062315",
+        "train_delay_msg": []
+    },
+    {
+        "train_number": "38470",
+        "train_type": "S",
+        "train_line": "4",
+        "train_departure": "2407062314",
+        "train_stops": "Heidelberg-Pfaffengrund/Wieblingen|Mannheim-Friedrichsfeld Süd|Mannheim-Seckenheim|Mannheim ARENA/Maimarkt|Mannheim Hbf|Ludwigshafen(Rhein) Mitte|Ludwigshafen(Rh)Hbf|Ludwigshafen-Mundenheim|Ludwigshafen-Rheingönheim|Limburgerhof|Schifferstadt|Schifferstadt Süd|Speyer Nord-West|Speyer Hbf|Berghausen(Pfalz)|Heiligenstein(Pfalz)|Lingenfeld|Germersheim",
+        "train_delay_departure": "2407062318",
+        "train_delay_msg": []
+    },
+    {
+        "train_number": "1998",
+        "train_type": "IC",
+        "train_line": "unk",
+        "train_departure": "2407070002",
+        "train_stops": "Weinheim(Bergstr)Hbf|Bensheim|Darmstadt Hbf|Frankfurt(Main)Hbf",
+        "train_delay_departure": "2407070003",
+        "train_delay_msg": []
+    },
+    {
+        "train_number": "26158",
+        "train_type": "RE",
+        "train_line": "73",
+        "train_departure": "2407062350",
+        "train_stops": "Mannheim Hbf",
+        "train_delay_departure": "2407062354",
+        "train_delay_msg": []
+    },
+    {
+        "train_number": "38260",
+        "train_type": "S",
+        "train_line": "2",
+        "train_departure": "2407062345",
+        "train_stops": "Heidelberg-Pfaffengrund/Wieblingen|Mannheim-Friedrichsfeld Süd|Mannheim-Seckenheim|Mannheim ARENA/Maimarkt|Mannheim Hbf|Ludwigshafen(Rhein) Mitte|Ludwigshafen(Rh)Hbf|Ludwigshafen-Mundenheim|Ludwigshafen-Rheingönheim|Limburgerhof|Schifferstadt|Böhl-Iggelheim|Haßloch(Pfalz)|Neustadt-Böbig|Neustadt(Weinstr)Hbf|Lambrecht(Pfalz)|Neidenfels|Weidenthal|Frankenstein(Pfalz)|Hochspeyer|Kaiserslautern Hbf",
+        "train_delay_departure": "2407062346",
+        "train_delay_msg": []
+    },
+    {
+        "train_number": "38262",
+        "train_type": "S",
+        "train_line": "2",
+        "train_departure": "2407062314",
+        "train_stops": "Heidelberg-Pfaffengrund/Wieblingen|Mannheim-Friedrichsfeld Süd|Mannheim-Seckenheim|Mannheim ARENA/Maimarkt|Mannheim Hbf|Ludwigshafen(Rhein) Mitte|Ludwigshafen(Rh)Hbf|Ludwigshafen-Mundenheim|Ludwigshafen-Rheingönheim|Limburgerhof|Schifferstadt|Böhl-Iggelheim|Haßloch(Pfalz)|Neustadt-Böbig|Neustadt(Weinstr)Hbf|Lambrecht(Pfalz)|Neidenfels|Weidenthal|Frankenstein(Pfalz)|Hochspeyer|Kaiserslautern Hbf",
+        "train_delay_departure": "2407062318",
+        "train_delay_msg": []
+    },
+    {
+        "train_number": "38145",
+        "train_type": "S",
+        "train_line": "1",
+        "train_departure": "2407062329",
+        "train_stops": "Heidelberg-Weststadt/Südstadt|Heidelberg-Altstadt|Heidelberg-Schlierbach/Ziegelhausen|Heidelberg Orthopädie|Neckargemünd|Neckargemünd Altstadt|Neckarsteinach|Neckarhausen bei Neckarsteinach|Hirschhorn(Neckar)|Eberbach|Lindach|Zwingenberg(Baden)|Neckargerach|Binau|Mosbach-Neckarelz|Mosbach West|Mosbach(Baden)|Neckarburken|Dallau|Auerbach(b Mosbach, Baden)|Oberschefflenz|Eicholzheim|Seckach|Zimmern(b Seckach)|Adelsheim Nord|Osterburken",
+        "train_delay_departure": "2407062334",
+        "train_delay_msg": []
+    },
+    {
+        "train_number": "38377",
+        "train_type": "S",
+        "train_line": "3",
+        "train_departure": "2407062325",
+        "train_stops": "Heidelberg-Kirchheim/Rohrbach|St Ilgen-Sandhausen|Wiesloch-Walldorf|Rot-Malsch|Bad Schönborn-Kronau|Bad Schönborn Süd|Stettfeld-Weiher|Ubstadt-Weiher|Bruchsal|Bruchsal Bildungszentrum|Untergrombach|Weingarten(Baden)|Karlsruhe-Durlach|Karlsruhe Hbf",
+        "train_delay_departure": "2407062332",
+        "train_delay_msg": []
+    },
+    {
+        "train_number": "15338",
+        "train_type": "RB",
+        "train_line": "68",
+        "train_departure": "2407062320",
+        "train_stops": "Heidelberg-Pfaffengrund/Wieblingen|Neu-Edingen/Friedrichsfeld|Ladenburg|Heddesheim/Hirschberg|Weinheim-Lützelsachsen|Weinheim(Bergstr)Hbf|Weinheim-Sulzbach|Hemsbach|Laudenbach(Bergstr)|Heppenheim(Bergstr)|Bensheim|Bensheim-Auerbach|Zwingenberg(Bergstr)|Hähnlein-Alsbach|Bickenbach(Bergstr)|Darmstadt-Eberstadt|Darmstadt Süd|Darmstadt Hbf|Langen(Hess)|Frankfurt(Main)Hbf",
+        "train_delay_departure": "2407062321",
+        "train_delay_msg": []
+    }
+]

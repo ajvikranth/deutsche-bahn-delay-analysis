@@ -48,14 +48,19 @@ def get_data():
             timetable['train_line']= train.train_line
         except AttributeError:
             timetable['train_line']= 'unk'
-        for d_train in  train_delays:
-            if train.train_number == d_train.train_number:
-                try:
-                    timetable["train_delay_departure"] = d_train.
-                for j in d_train.train_changes.messages:
-                    timetable["train_delay_msg"].append(j.message)
-            else:
-                timetable["train_delay_departure"] = train.departure
+        # for d_train in  train_delays:
+        #     if train.train_number == d_train.train_number:
+        #         try:
+        #             timetable["train_delay_departure"] = d_train.train_changes.
+        #         for j in d_train.train_changes.messages:
+        #             timetable["train_delay_msg"].append(j.message)
+        #     else:
+        #         timetable["train_delay_departure"] = train.departure
+        dtrain = timetablehelper.get_timetable_changes([train])
+        try:
+            timetable["train_delay_departure"] = dtrain[0].train_changes.departure
+        except:
+            timetable["train_delay_departure"] = train.departure
 
         timetable_list.append(timetable)
         
