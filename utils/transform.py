@@ -1,6 +1,6 @@
 from datetime import datetime
 import json
-
+from bahn import get_stops_lat_log
 def transform(timetable:list) -> list:
 
     # timetable = json.loads(timetable)
@@ -16,6 +16,7 @@ def transform(timetable:list) -> list:
                                 ).isoformat()
         
         train_details["train_stops"] = train_details["train_stops"].split("|")
+        train_details["stops_coordinate"] = get_stops_lat_log(train_details["train_stops"])
              
         if train_details["train_delay_msg"]:
             train_details["train_delay_msg"] = max(
@@ -27,7 +28,8 @@ def transform(timetable:list) -> list:
     
     return timetable
 
-# def get_stops_lat_log(stops:list)
+
+
 
 if __name__=="__main__":
     timetable = [{
@@ -61,6 +63,8 @@ if __name__=="__main__":
          'train_delay_departure': '2024-07-07T14:49:00', 
          'train_delay_msg': 'Bauarbeiten'
                          }]
+    
+  
 
 
 

@@ -8,7 +8,8 @@ from dotenv import load_dotenv
 
 from deutsche_bahn_api import (api_authentication,
                                 station,
-                                timetable_helper)
+                                timetable_helper,
+                                station_helper)
 
 def get_data() -> json:
     """
@@ -76,5 +77,46 @@ def get_data() -> json:
 
         return timetable
 
+def get_stops_lat_log(stops:list):
+
+    load_dotenv()
+    api = api_authentication.ApiAuthentication(client_id=os.getenv("client_id"),
+                                            client_secret=os.getenv("client_secret"))
+
+    success: bool = api.test_credentials()
+    stationhelper = station_helper.StationHelper()
+    stops_coordinates = []
+    if success:
+        for stop in stops:
+            found_stations_by_name =[]
+            for i in range(len(stop)//3):
+            
+                found_stations_by_name = stationhelper.find_stations_by_name(stop[0:len(stop)-i]) 
+                if  found_stations_by_name:
+                    break
+
+            if found_stations_by_name:
+                lat = float(found_stations_by_name[0].Breite.replace(",","."))
+                long = float(found_stations_by_name[0].Laenge.replace(",","."))
+
+                stops_coordinates.append((lat,long))
+            else:
+                stops_coordinates.append(())
+            
+        return stops_coordinates
+            
+
+
 if __name__ == "__main__":
-    print(get_data())
+    # print(get_data())
+    stops = ['Heidelberg Hbf', 
+            'Neckargemⁿnd', 
+            'Meckesheim', 
+            'Sinsheim(Elsenz) Hbf', 
+            'Sinsheim Museum/Arena', 
+            'Bad Rappenau', 
+            'Bad Wimpfen', 
+            'Bad Friedrichshall Hbf', 
+            'Neckarsulm', 
+            'Heilbronn Hbf']
+    get_stops_lat_log(stops)
