@@ -1,8 +1,6 @@
 """
-
+This module has function to interact with Deutsche-bahn API
 """
-import json
-
 import os
 from dotenv import load_dotenv
 
@@ -11,9 +9,9 @@ from deutsche_bahn_api import (api_authentication,
                                 timetable_helper,
                                 station_helper)
 
-def get_data() -> json:
+def get_data() -> list:
     """
-    
+    This function gets timetable data from Deutsche-bahn API
     """
     load_dotenv()
     api = api_authentication.ApiAuthentication(client_id=os.getenv("client_id"),
@@ -68,8 +66,10 @@ def get_data() -> json:
                 for j in dtrain[0].train_changes.messages:
                     train_details["train_delay_msg"].append(j.message)
 
-            except AttributeError:
+            except Exception as e:
+                print(e,"while getting bahn info")
                 train_details["train_delay_departure"] = train.departure
+
 
             timetable.append(train_details)
 
@@ -77,7 +77,11 @@ def get_data() -> json:
 
         return timetable
 
-def get_stops_lat_log(stops:list):
+def get_stops_lat_log(stops:list) -> list:
+    """
+    This function gets latitude and longitude of the list of stations
+    :stops:list of train station stops
+    """
 
     load_dotenv()
     api = api_authentication.ApiAuthentication(client_id=os.getenv("client_id"),
@@ -90,8 +94,8 @@ def get_stops_lat_log(stops:list):
         for stop in stops:
             found_stations_by_name =[]
             for i in range(len(stop)//3):
-            
-                found_stations_by_name = stationhelper.find_stations_by_name(stop[0:len(stop)-i]) 
+
+                found_stations_by_name = stationhelper.find_stations_by_name(stop[0:len(stop)-i])
                 if  found_stations_by_name:
                     break
 
@@ -102,21 +106,5 @@ def get_stops_lat_log(stops:list):
                 stops_coordinates.append((lat,long))
             else:
                 stops_coordinates.append(())
-            
+
         return stops_coordinates
-            
-
-
-if __name__ == "__main__":
-    # print(get_data())
-    stops = ['Heidelberg Hbf', 
-            'Neckargemⁿnd', 
-            'Meckesheim', 
-            'Sinsheim(Elsenz) Hbf', 
-            'Sinsheim Museum/Arena', 
-            'Bad Rappenau', 
-            'Bad Wimpfen', 
-            'Bad Friedrichshall Hbf', 
-            'Neckarsulm', 
-            'Heilbronn Hbf']
-    get_stops_lat_log(stops)
