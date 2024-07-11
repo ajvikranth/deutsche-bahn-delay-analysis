@@ -1,9 +1,10 @@
 """
 This is the main module 
 """
+import time
 from datetime import datetime
 from utils import bahn, transform, db
-import time
+
 
 
 def main() -> None:

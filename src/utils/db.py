@@ -32,7 +32,7 @@ def insert_timetable(station, timetable:list) -> bool:
         supabase: Client = create_client(url, key)
         data, _ = supabase.table('deutschebahn_freiburg').upsert(timetable).execute()
         data, ls = data
-        
+
     if len(ls)>0:
         return True
     return False

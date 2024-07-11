@@ -1,12 +1,16 @@
+"""
+this modules is for getting necessary data related to dbahn
+"""
 import os
 from dotenv import load_dotenv
 
 from deutsche_bahn_api import (api_authentication,
-                                station,
-                                timetable_helper,
                                 station_helper)
                                 
 def main():
+    """
+    this function gets station object from various 
+    """
     load_dotenv()
     api = api_authentication.ApiAuthentication(client_id=os.getenv("client_id"),
                                             client_secret=os.getenv("client_secret"))
